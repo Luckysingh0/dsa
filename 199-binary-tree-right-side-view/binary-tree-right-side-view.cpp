@@ -18,28 +18,15 @@ public:
         vector<int>res;
         while(!q.empty()){
             int levelsiz=q.size();
-            vector<int>currl;
             TreeNode* node=NULL;
             for(int i=0;i<levelsiz;i++)
             {
-                if(levelsiz==2)
-                {
-                    if(node != NULL) 
-                {
-
-                    q.pop();
-                    if(node->left)q.push(node->left);
-                    if(node->right)q.push(node->right);
-                }
-
-                }
-                TreeNode* node=q.front();
+                node=q.front();
                 q.pop();
-                currl.push_back(node->val);
                 if(node->left)q.push(node->left);
                  if(node->right)q.push(node->right);
             }
-            res.push_back(currl.back());
+            res.push_back(node->val);
         }
         return res;
     }
