@@ -12,7 +12,7 @@
 class Solution {
 public:
     int maxDepth(TreeNode* root) {
-        if(!root) return 0;  
+        if(!root) return {};  
         int depth=0;
         vector<int>res;
         queue<TreeNode*>q;
