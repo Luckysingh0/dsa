@@ -5,16 +5,17 @@ public:
         int j=1;
         while(j<nums.size())
         {
-            if(nums[i]!=nums[j])
+            if(nums[i]==nums[j])
+            {
+                j++;
+            }
+           else if(nums[i]!=nums[j])
             {
                 i++;
                 nums[i]=nums[j];
                 j++;
             }
-            else{
-                j++;
-            }
         }
-        return i+1;
+        return  i+1;
     }
 };
